@@ -8,11 +8,11 @@
 命令行形式的不足之处在于保存了明文的账号和密码,但如果我们将账号和密码写入java程序中,在服务器上以jar包形式执行,同样可以配合cron实现自动重连的功能.
 
 执行方式:
-args[0]: IAAA账号
-args[1]: IAAA密码
-args[2]: operation: connect | disconnect | disconnectall
-args[3]: range: 1(收费网) | 2(免费网)
-args[4]: verbose(是否详细打印response): True | False
+* args[0]: IAAA账号
+* args[1]: IAAA密码
+* args[2]: operation: connect | disconnect | disconnectall
+* args[3]: range: 1(收费网) | 2(免费网)
+* args[4]: verbose(是否详细打印response): True | False
 ##API说明
 ###its.pku.edu.cn:5428/ipgatewayofpku
 格式https://its.pku.edu.cn:5428/ipgatewayofpku?uid=xxxxxxxx&password=xxxxxx&range=2&operation=&timeout=1
