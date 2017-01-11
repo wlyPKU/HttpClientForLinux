@@ -18,11 +18,11 @@ public class httpClient {
 
     public static void main(String[] args){
         System.out.println("Usage: httpClient uid passwd operation range [verbose]");
-        System.out.println("\t\toperation: connect | disconnectall");
+        System.out.println("\t\toperation: connect | disconnect | disconnectall");
         System.out.println("\t\tGlobal: 1 | Free: 2");
-        System.out.println("\t\tVerbose: true | false");
+        System.out.println("\t\tVerbose: true | false(default false)");
         String range = "2";
-        boolean verbose = true;
+        boolean verbose = false;
         if(args.length > 3){
             range = args[3];
         }
@@ -48,6 +48,7 @@ public class httpClient {
             if(verbose){
                 System.out.println(resString);
             }
+            //输出返回信息
             String usefulString[] = resString.split("<!--IPGWCLIENT_START ");
             if(usefulString.length >= 2){
                 String info = usefulString[1];
